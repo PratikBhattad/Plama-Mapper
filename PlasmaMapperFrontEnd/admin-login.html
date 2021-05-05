@@ -1,0 +1,51 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="CSS/main.css">
+    <!-- <script src="JS/admin.js"></script> -->
+</head>
+<body>
+    <div class="search">    
+        <a href="home.html"><h2 style="display: inline-block;">PLASMA MAPPER</h2></a>
+        <a href = "home.html"><button id="donate-button">Home</button></a>
+        <a href = "donate-form.html"><button id="donate-button">Donate Plasma</button></a>
+      </div>
+      <div style="background-color: rgb(206, 185, 185);height: 100%;width: 100%;position: absolute;">
+        <center>
+        <div class = 'form'>
+    
+                <h1 style="letter-spacing: 3px;">ADMIN LOGIN</h1><br>
+                        <input type = "text" id = "username" placeholder="Username">
+                        <input type = "password" id = "password" placeholder="Password">
+                        <button onclick="login()">Login</button>
+                        <button onclick="reset()">Reset</button>
+            
+            </div>
+        </center>
+        </div>
+</body>
+</html>
+<script>
+    function login()
+    {
+        var xhr = new XMLHttpRequest()
+        xhr.addEventListener("readystatechange", function(){
+            if(this.readyState === 4 && this.status === 200)
+            {
+                if(Boolean(this.responseText) === true)
+                {
+                    window.location.href = "admin.html"
+                }
+                else
+                {
+                    alert("Invalid Username or Password")
+                }
+            }
+        })
+        xhr.open("GET","http://localhost:8080/login/"+document.getElementById('username').value+"/"+document.getElementById('password').value)
+        xhr.send()
+    }
+</script>

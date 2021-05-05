@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search for Plasma</title>
+    <link rel="stylesheet" href="CSS/main.css">
+    <script src="JS/form.js"></script>
+</head>
+<body>
+    <div class="search">   
+        <a href="home.html"><h2 style="display: inline-block;">PLASMA MAPPER</h2> </a>
+        <a href = "admin-login.html"><button id="donate-button">Admin</button></a>
+        <a href = "donate-form.html"><button id="donate-button">Donate Plasma</button></a>
+        <input type="text" placeholder="Location" id = 'searchLocation'>
+        <select id = 'searchBloodGroup'>
+            <option>A +ve</option>
+            <option>A -ve</option>
+            <option>B +ve</option>
+            <option>B -ve</option>
+            <option>AB +ve</option>
+            <option>AB -ve</option>
+            <option>O +ve</option>
+            <option>O -ve</option>
+        </select>
+        <button onclick="fetchAllDonorsByLocation()">Search</button>
+        
+    </div>
+    <center>
+    <div style="background-color: rgb(255, 107, 107);height: 100%;width: 100%;position: absolute;">
+    <div class = 'form'>
+
+            <h1 style="letter-spacing: 3px;">DONATE PLASMA</h1><br>
+                    <input type = "text" id = "location" placeholder="Location">
+                    <input type = "text" id = "name" placeholder="Name">
+                    <input type = "text" id = "phone" placeholder="Contact Number">
+                    <input type = "email" id = "email" placeholder="Email ID">
+                    <input type = "date" id = "date">
+                    <select id = 'bloodgroup'>
+                        <option>A +ve</option>
+                        <option>A -ve</option>
+                        <option>B +ve</option>
+                        <option>B -ve</option>
+                        <option>AB +ve</option>
+                        <option>AB -ve</option>
+                        <option>O +ve</option>
+                        <option>O -ve</option>
+                    </select>
+                    <br>
+                    <button onclick="save()">Apply</button>
+                    <button onclick="reset()">Reset</button>
+        
+    </div>
+</div>
+</center>
+</body>
+</html>

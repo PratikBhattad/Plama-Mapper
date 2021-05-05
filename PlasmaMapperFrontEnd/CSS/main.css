@@ -1,0 +1,148 @@
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none;
+    color: red;
+}
+.form{
+    width: 30%;
+    border-radius: 8px;
+    color: red;
+    padding: 30px;
+    background-color: rgb(51, 36, 36);
+    margin-top: 5%;       
+}
+.grid-container{
+    display: grid;
+    margin: 0px;
+    padding: 10px;
+    width: 100%;
+    overflow-y: auto;
+    position: fixed;
+    height: 100%;
+    background-color: rgb(214, 203, 203);
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-template-rows: repeat(auto-fill, minmax(160px,1fr));
+    grid-column-gap: 2.5px;
+    grid-row-gap: 5px;
+}
+
+.admin-grid-container{
+    display: grid;
+    margin: 0px;
+    padding: 10px;
+    width: 100%;
+    overflow-y: auto;
+    position: fixed;
+    height: 100%;
+    background-color: rgb(214, 203, 203);
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-template-rows: repeat(auto, minmax(210px,1fr));
+    grid-column-gap: 2.5px;
+    grid-row-gap: 5px;
+}
+.admin-card{
+    font-weight: bold;
+    height: 210px;
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(235, 232, 50);
+    background-color: rgb(51, 38, 38);
+    width: 300px;
+}
+
+.card{
+    font-weight: bold;
+    height: 160px;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(235, 232, 50);
+    background-color: rgb(51, 38, 38);
+    width: 300px;
+}
+input{
+    height: 30px;
+    padding: 6px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    width: 300px;
+    font-size: 19px;
+    text-align: center;
+}
+select{
+    height: 25px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 300px;
+}
+.search select{
+    height: 25px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 60px;
+
+}
+.search{
+    display: flex;
+    padding-top: 5px;
+    justify-content: space-around;
+    align-items: center;
+    letter-spacing: 3px;
+    color: red;
+    height: 7vh;
+    background-color: black;
+}
+.search button{
+    height: 30px;
+    width: 100px;
+    color: red;
+    background-color: black;
+    margin: 5px;
+    font-weight: bold;
+    font-size: 19px;
+    border-radius: 15px;
+    padding: 2px;    
+    border: none;
+    cursor: pointer;
+}
+#donate-button{
+    border: none;
+    background-color: black;
+    color: red;
+    width: 150px;
+
+}
+
+.form button{
+    height: 30px;
+    width: 130px;
+    color: red;
+    background-color: black;
+    margin: 15px;
+    font-weight: bold;
+    font-size: 19px;
+    border-radius: 15px;
+    padding: 2px;    
+    border: 2px solid white;
+    cursor: pointer;
+}
+.admin-card button{
+    height: 30px;
+    width: 100px;
+    color: rgb(255, 255, 255);
+    background-color: blue;
+    margin: 5px;
+    font-weight: bold;
+    font-size: 19px;
+    border-radius: 15px;
+    padding: 2px;    
+    border: none;
+    cursor: pointer;
+}
+
